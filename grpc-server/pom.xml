@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>br.usp.projeto-tcc</groupId>
+        <artifactId>projeto-tcc-usp</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>grpc-server</artifactId>
+    <name>gRPC Server</name>
+    <description>Módulo do servidor gRPC</description>
+
+    <dependencies>
+        <!-- Contrato com os Protos auto-gerados -->
+        <dependency>
+            <groupId>br.usp.projeto-tcc</groupId>
+            <artifactId>grpc-contracts</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- Starter do Spring Boot Web (se estiver usando endpoints HTTP no servidor, caso contrário mantenha apenas o starter comum) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- CORREÇÃO CHAVE: Força a dependência exata do servidor gRPC do Spring Boot -->
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-server-spring-boot-starter</artifactId>
+            <version>3.1.0.RELEASE</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+

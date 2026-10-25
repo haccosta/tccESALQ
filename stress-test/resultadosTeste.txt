@@ -1,0 +1,135 @@
+Primeira Rodada
+
+     execution: local
+        script: load-tests.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1000 max VUs, 7m30s max duration (incl. graceful stop):
+              * default: 1000 looping VUs for 7m0s (gracefulStop: 30s)
+
+INFO[0423] [k6-reporter v3.0.4] Generating HTML summary report, with theme: default  source=console
+     ✓ status 200
+
+     checks.........................: 100.00% ✓ 335062     ✗ 0     
+     data_received..................: 113 MB  269 kB/s
+     data_sent......................: 52 MB   124 kB/s
+     http_req_blocked...............: avg=236.3µs  min=2.03µs   med=5.61µs  max=200.22ms p(90)=7.9µs   p(95)=10.76µs
+     http_req_connecting............: avg=226.17µs min=0s       med=0s      max=163.8ms  p(90)=0s      p(95)=0s     
+   ✓ http_req_duration..............: avg=3.94ms   min=916.85µs med=2.18ms  max=444.19ms p(90)=4.51ms  p(95)=6.76ms 
+       { expected_response:true }...: avg=3.94ms   min=916.85µs med=2.18ms  max=444.19ms p(90)=4.51ms  p(95)=6.76ms 
+   ✓ http_req_failed................: 0.00%   ✓ 0          ✗ 335062
+     http_req_receiving.............: avg=57.69µs  min=10.69µs  med=51.63µs max=10.92ms  p(90)=75.97µs p(95)=89.44µs
+     http_req_sending...............: avg=44.75µs  min=7.3µs    med=19.93µs max=72.66ms  p(90)=30.16µs p(95)=37.04µs
+     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s      max=0s       p(90)=0s      p(95)=0s     
+     http_req_waiting...............: avg=3.84ms   min=874.69µs med=2.1ms   max=436.05ms p(90)=4.42ms  p(95)=6.67ms 
+     http_reqs......................: 335062  793.992397/s
+     iteration_duration.............: avg=1.25s    min=501.56ms med=1.25s   max=2.49s    p(90)=1.85s   p(95)=1.92s  
+     iterations.....................: 335062  793.992397/s
+     vus............................: 16      min=16       max=1000
+     
+     
+     Rodada 2
+     
+ execution: local
+        script: load-tests.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1000 max VUs, 7m30s max duration (incl. graceful stop):
+              * default: 1000 looping VUs for 7m0s (gracefulStop: 30s)
+
+INFO[0422] [k6-reporter v3.0.4] Generating HTML summary report, with theme: default  source=console
+     ✓ status 200
+
+     checks.........................: 100.00% ✓ 334690     ✗ 0     
+     data_received..................: 113 MB  268 kB/s
+     data_sent......................: 52 MB   124 kB/s
+     http_req_blocked...............: avg=174.47µs min=1.94µs   med=6.19µs  max=131.2ms  p(90)=10.58µs p(95)=14.97µs 
+     http_req_connecting............: avg=164.33µs min=0s       med=0s      max=127.84ms p(90)=0s      p(95)=0s      
+   ✓ http_req_duration..............: avg=5.55ms   min=899.54µs med=3.08ms  max=392.56ms p(90)=9.26ms  p(95)=14.04ms 
+       { expected_response:true }...: avg=5.55ms   min=899.54µs med=3.08ms  max=392.56ms p(90)=9.26ms  p(95)=14.04ms 
+   ✓ http_req_failed................: 0.00%   ✓ 0          ✗ 334690
+     http_req_receiving.............: avg=66.84µs  min=12.68µs  med=54.41µs max=15.11ms  p(90)=93.53µs p(95)=125.14µs
+     http_req_sending...............: avg=37.24µs  min=7.32µs   med=22.39µs max=59.99ms  p(90)=39.48µs p(95)=53.34µs 
+     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s      max=0s       p(90)=0s      p(95)=0s      
+     http_req_waiting...............: avg=5.44ms   min=846.09µs med=2.99ms  max=391.65ms p(90)=9.15ms  p(95)=13.92ms 
+     http_reqs......................: 334690  793.234234/s
+     iteration_duration.............: avg=1.25s    min=502.11ms med=1.25s   max=2.41s    p(90)=1.85s   p(95)=1.93s   
+     iterations.....................: 334690  793.234234/s
+     vus............................: 17      min=17       max=1000
+
+running (7m01.9s), 0000/1000 VUs, 334690 complete and 0 interrupted iterations
+default ✓ [======================================] 1000 VUs  7m0s  
+
+
+
+Roada 3
+
+     execution: local
+        script: load-tests.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1000 max VUs, 7m30s max duration (incl. graceful stop):
+              * default: 1000 looping VUs for 7m0s (gracefulStop: 30s)
+
+INFO[0423] [k6-reporter v3.0.4] Generating HTML summary report, with theme: default  source=console
+     ✓ status 200
+
+     checks.........................: 100.00% ✓ 334463     ✗ 0     
+     data_received..................: 113 MB  268 kB/s
+     data_sent......................: 52 MB   124 kB/s
+     http_req_blocked...............: avg=147.24µs min=1.93µs   med=5.91µs  max=163.53ms p(90)=9.06µs  p(95)=12.94µs 
+     http_req_connecting............: avg=136.59µs min=0s       med=0s      max=122.69ms p(90)=0s      p(95)=0s      
+   ✓ http_req_duration..............: avg=5.65ms   min=914.73µs med=2.61ms  max=760.59ms p(90)=7.52ms  p(95)=11.77ms 
+       { expected_response:true }...: avg=5.65ms   min=914.73µs med=2.61ms  max=760.59ms p(90)=7.52ms  p(95)=11.77ms 
+   ✓ http_req_failed................: 0.00%   ✓ 0          ✗ 334463
+     http_req_receiving.............: avg=63.52µs  min=13.06µs  med=52.99µs max=18.65ms  p(90)=84.24µs p(95)=107.89µs
+     http_req_sending...............: avg=42.43µs  min=7.49µs   med=21.26µs max=81.29ms  p(90)=34.46µs p(95)=45.29µs 
+     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s      max=0s       p(90)=0s      p(95)=0s      
+     http_req_waiting...............: avg=5.54ms   min=865.78µs med=2.52ms  max=757.19ms p(90)=7.41ms  p(95)=11.66ms 
+     http_reqs......................: 334463  792.564035/s
+     iteration_duration.............: avg=1.25s    min=501.64ms med=1.25s   max=2.8s     p(90)=1.85s   p(95)=1.93s   
+     iterations.....................: 334463  792.564035/s
+     vus............................: 18      min=18       max=1000
+
+running (7m02.0s), 0000/1000 VUs, 334463 complete and 0 interrupted iterations
+default ✓ [======================================] 1000 VUs  7m0s  
+
+
+
+=== Relatório de Análise: Requisições e MEM_MB ===
+Total de pods distintos encontrados: 3
+Total geral de requisições processadas: 1161872
+
+Distribuição e Memória Média por Pod:
+  • Pod: grpc-java-server-57c9f779c5-8gwqv
+    - Total de Requisições: 391004
+    - Média de Consumo (MEM_MB): 30.44 MB
+    - Amostras de memória recolhidas: 391004
+
+  • Pod: grpc-java-server-57c9f779c5-gzvmz
+    - Total de Requisições: 390660
+    - Média de Consumo (MEM_MB): 33.94 MB
+    - Amostras de memória recolhidas: 390660
+
+  • Pod: grpc-java-server-57c9f779c5-dz8k5
+    - Total de Requisições: 380208
+    - Média de Consumo (MEM_MB): 54.78 MB
+    - Amostras de memória recolhidas: 380208
+    
+    
+    handerson@hac001:~/Treinamentos/projetoTCC_v2/stress-test$ echo "=== SISTEMA OPERACIONAL ===" && . /etc/os-release && echo "$PRETTY_NAME" && echo -e "\n=== MEMÓRIA ===" && free -h && echo -e "\n=== CPU ===" && lscpu | grep -E "Model name|Core|CPU\(s\):"
+=== SISTEMA OPERACIONAL ===
+Ubuntu 20.04.6 LTS
+
+=== MEMÓRIA ===
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:          11Gi       3,1Gi       5,2Gi       405Mi       3,3Gi       7,7Gi
+Swap:         2,0Gi       1,4Gi       582Mi
+
+=== CPU ===
+CPU(s):                          8
+Model name:                      Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz
+Core(s) per socket:              4
+NUMA node0 CPU(s):               0-7
+
+

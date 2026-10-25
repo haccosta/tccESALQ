@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-java-server
+spec:
+  clusterIP: None # <-- Define como Headless
+  selector:
+    app: grpc-java-server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 50051
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-java-server
+spec:
+  replicas: 3 # <-- Importante: 3 instâncias para testar a distribuição
+  selector:
+    matchLabels:
+      app: grpc-java-server
+  template:
+    metadata:
+      labels:
+        app: grpc-java-server
+    spec:
+      resources:
+        limits:
+          cpu: "2"
+          memory: "1Gi"
+        requests:
+          cpu: "1"
+          memory: "500Mi"
+      containers:
+        - name: grpc-java-server
+          image: hacalves/projetotcc-server-gprc:2.0.2
+          ports:
+            - containerPort: 50051
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-java-client
+spec:
+  replicas: 1 # Apenas uma réplica conforme solicitado
+  selector:
+    matchLabels:
+      app: grpc-java-client
+  template:
+    metadata:
+      labels:
+        app: grpc-java-client
+    spec:
+      resources:
+        limits:
+          cpu: "2"
+          memory: "1Gi"
+        requests:
+          cpu: "0.5"
+          memory: "500Mi"
+      containers:
+        - name: grpc-java-client
+          image: hacalves/projetotcc-client-gprc:2.0.4 # Imagem atualizada com endpoints GET/POST corrigidos
+          ports:
+            - containerPort: 8080                     # Porta do Spring Boot (8080 conforme application.properties)
+          env:
+            # Alterne entre "round_robin" e "pick_first" para comparar a performance
+            - name: LB_POLICY
+              value: "round_robin"
+            - name: GRPC_CLIENT_MEU_SERVICO_GRPC_ADDRESS
+              value: dns:///grpc-java-server:50051
